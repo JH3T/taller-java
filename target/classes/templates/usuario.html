@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>Usuario</title>
+    <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: white;
+                color: purple;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            h2 {
+                text-align: center;
+                color: purple;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            table, th, td {
+                border: 1px solid purple;
+            }
+            th, td {
+                padding: 10px;
+                text-align: left;
+            }
+            th {
+                background-color: purple;
+                color: white;
+            }
+            .mt-5 {
+                margin-top: 50px;
+            }
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white;
+                background-color: purple;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                text-align: center;
+                cursor: pointer;
+            }
+            .btn-outline-success {
+                background-color: white;
+                color: purple;
+                border: 2px solid purple;
+            }
+            .btn-outline-success:hover {
+                background-color: purple;
+                color: white;
+            }
+            .d-flex {
+                display: flex;
+                align-items: center;
+            }
+            .justify-content-center {
+                justify-content: center;
+            }
+            .mb-3 {
+                margin-bottom: 20px;
+            }
+            .p-3 {
+                padding: 20px;
+            }
+        </style>
+</head>
+
+<body>
+<div class="container p-4">
+    <center><h2 class="section__title">TU INFO</h2></center><br><br>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Direccion</th>
+            <th>Pais</th>
+            <th>Correo</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td th:text="${usuario.id}"></td>
+            <td th:text="${usuario.nombre}"> </td>
+            <td th:text="${usuario.edad}"> </td>
+            <td th:text="${usuario.direccion}"> </td>
+            <td th:text="${usuario.pais}"> </td>
+            <td th:text="${usuario.correo}"> </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h1 class="mt-5">Paquetes Disponibles</h1>
+    <div th:each="paquete : ${listaPaquetes}">
+        <div class="d-flex align-items-center mb-3">
+            <span th:text="${paquete.nombre}" class="me-3 fw-2" style="margin-right: 20px;"></span>
+            <button type="button" class="btn" onclick="this.disabled=true">Recibir El Envio</button>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div class="p-3"><a href="/" class="btn btn-outline-success">Inicio</a></div>
+    </div>
+</div>
+</body>
+</html>
