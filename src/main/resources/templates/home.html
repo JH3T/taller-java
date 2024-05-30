@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sistema Gestor de Entregas</title>
+	<style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        color: purple;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        color: purple;
+      }
+      .card {
+        border: 1px solid purple;
+        border-radius: 5px;
+        margin-top: 20px;
+        background-color: white;
+      }
+      .card-header {
+        background-color: purple;
+        color: white;
+        padding: 10px;
+        border-bottom: 1px solid purple;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      .card-body {
+        padding: 20px;
+      }
+      .card-title {
+        margin-bottom: 15px;
+        color: purple;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: purple;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+      }
+      .btn:hover {
+        background-color: darkviolet;
+      }
+    </style>
+</head>
+<body>
+
+<main class="container">
+
+	<h1>Sistema Gestor de Entregas</h1>
+
+	<div class="container">
+		<div class="card">
+			<div class="card-header">
+				Administrador
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">Interfaz para admin</h5>
+				<a href="/admin" class="btn">Mirar</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-header">
+				Login Usuario
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">Interfaz para usuario</h5>
+				<a href="/login" class="btn">Mirar</a>
+			</div>
+		</div>
+	</div>
+</main>
+</body>
+</html>
